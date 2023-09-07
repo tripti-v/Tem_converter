@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <script src="https://kit.fontawesome.com/c90bd6259d.js" crossorigin="anonymous"></script>
+    <style>
+        @keyframes lights {
+            0% {
+                color: hsl(230, 40%, 80%);
+                text-shadow:
+                    0 0 1em hsla(320, 100%, 50%, 0.2),
+                    0 0 0.125em hsla(320, 100%, 60%, 0.3),
+                    -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+                    1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+            }
+
+            30% {
+                color: hsl(230, 80%, 90%);
+                text-shadow:
+                    0 0 1em hsla(320, 100%, 50%, 0.5),
+                    0 0 0.125em hsla(320, 100%, 60%, 0.5),
+                    -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+                    0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+            }
+
+            40% {
+                color: hsl(230, 100%, 95%);
+                text-shadow:
+                    0 0 1em hsla(320, 100%, 50%, 0.5),
+                    0 0 0.125em hsla(320, 100%, 90%, 0.5),
+                    -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+                    0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+            }
+
+            70% {
+                color: hsl(230, 80%, 90%);
+                text-shadow:
+                    0 0 1em hsla(320, 100%, 50%, 0.5),
+                    0 0 0.125em hsla(320, 100%, 60%, 0.5),
+                    0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+                    -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+            }
+
+            100% {
+                color: hsl(230, 40%, 80%);
+                text-shadow:
+                    0 0 1em hsla(320, 100%, 50%, 0.2),
+                    0 0 0.125em hsla(320, 100%, 60%, 0.3),
+                    1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+                    -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+            }
+
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+
+            font: 100% / 1.5 Raleway, sans-serif;
+            color: hsl(230, 100%, 95%);
+            background: linear-gradient(135deg, hsl(230, 40%, 12%), hsl(230, 20%, 7%));
+            height: 100vh;
+
+        }
+
+        h2 {
+            margin: auto;
+            font-size: 3.5rem;
+            font-weight: 300;
+            animation: lights 5s 750ms linear infinite;
+        }
+
+        .temp-container {
+            width: 70%;
+            padding: 15px;
+            font-weight: bold;
+            font-size: 25px;
+            color: white;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        footer {
+            padding-top: 140px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" style="padding-top: 140px;">
+        <h2>Temperature Converter <i class="fa-solid fa-temperature-three-quarters"></i></h2>
+        <div class="temp-container">
+            <label for="celsius">Celsius:</label>
+            <input type="number" id="celsius" placeholder="Enter Temperature" oninput="convert('celsius')">
+        </div>
+        <div class="temp-container">
+            <label for="fahrenheit">Fahrenheit:</label>
+            <input type="number" id="fahrenheit" placeholder="Enter Temperature" oninput="convert('fahrenheit')">
+        </div>
+        <div class="temp-container">
+            <label for="kelvin">Kelvin:</label>
+            <input type="number" id="kelvin" placeholder="Enter Temperature" oninput="convert('kelvin')">
+        </div>
+    </div>
+
+
+    <footer>
+        <p class="footer-p">Made with by Tripti</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
